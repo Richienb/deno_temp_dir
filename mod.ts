@@ -6,4 +6,9 @@ const getDirectory = () => {
 	return Deno.env.get("TMPDIR") || "/tmp"
 }
 
-export default Deno.realPathSync(getDirectory())
+/**
+Get the path of the system temp directory.
+*/
+const tempDirectory = Deno.realPathSync(getDirectory())
+
+export default tempDirectory
