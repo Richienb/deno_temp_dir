@@ -3,4 +3,4 @@ import tempDirectory from "./mod.ts"
 
 Deno.test("main", () => {
 	assertEquals(typeof tempDirectory, "string")
-});
+})
