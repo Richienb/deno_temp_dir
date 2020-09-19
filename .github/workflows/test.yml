@@ -14,4 +14,4 @@ jobs:
         with:
           deno-version: v1.x
       - run: deno --version
-      - run: deno run --allow-env --allow-read test.ts
+      - run: deno test --allow-env --allow-read
