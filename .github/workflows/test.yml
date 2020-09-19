@@ -4,10 +4,14 @@ on:
   push:
     branches: [master]
 
-steps:
-  - uses: actions/checkout@v2
-  - uses: denolib/setup-deno@v2
-    with:
-      deno-version: v1.x
-  - run: deno --version
-  - run: deno run --allow-env --allow-read test.ts
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: denolib/setup-deno@v2
+        with:
+          deno-version: v1.x
+      - run: deno --version
+      - run: deno run --allow-env --allow-read test.ts
